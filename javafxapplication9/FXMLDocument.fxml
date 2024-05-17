@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxapplication9.FXMLDocumentController">
+   <top>
+      <Pane prefHeight="131.0" prefWidth="900.0" style="-fx-background-color: #156E8E;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="26.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../Downloads/logo-removebg-preview%20(1).png" />
+               </image>
+            </ImageView>
+            <Button fx:id="profile" layoutX="776.0" layoutY="41.0" mnemonicParsing="false" onAction="#showprofile" text="Profile" />
+         </children>
+      </Pane>
+   </top>
+   <left>
+      <Pane prefHeight="482.0" prefWidth="302.0" style="-fx-background-color: #156E8E;" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="searchfield" layoutX="70.0" layoutY="53.0" />
+          
+            <Button fx:id="show_movies" layoutX="93.0" layoutY="181.0" mnemonicParsing="false" onAction="#show_movies" text="Show Movies" />
+            
+             <ComboBox fx:id="genre" layoutX="69.0" layoutY="120.0" prefWidth="150" promptText="Select an option">
+     
+    </ComboBox>
+            <TableView fx:id="selectedmovies" layoutX="58.0" layoutY="305.0" prefHeight="200.0" prefWidth="155.0">
+              <columns>
+                <TableColumn fx:id="name" prefWidth="151.1999969482422" text="SelectedMovies" />
+              </columns>
+            </TableView>
+            <Button fx:id="checkout" layoutX="103.0" layoutY="519.0" mnemonicParsing="false" onAction="#checkout" text="Checkout" />
+      
+
+         </children></Pane>
+   </left>
+   <center>
+     
+        <TableView fx:id="moviesTable" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <columns>
+            <TableColumn fx:id="titleColumn" prefWidth="140.79999387264252" text="Title" />
+            <TableColumn fx:id="directorColumn" prefWidth="149.60006713867188" text="maker" />
+            <TableColumn fx:id="summaryColumn" prefWidth="308.0000305175781" text="Summary" />
+        </columns>
+    </TableView>
+     
+   </center>
+</BorderPane>
